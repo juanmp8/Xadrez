@@ -18,5 +18,10 @@ namespace xadrez_console.xadrez
         {
             return "T";
         }
+
+        public override bool[,] MovimentosPossiveis()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
