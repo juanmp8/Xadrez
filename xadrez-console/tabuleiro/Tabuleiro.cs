@@ -5,6 +5,7 @@ namespace tabuleiro {
 
         public int linhas { set; get; }
         public int colunas { set; get; }
+
         public Peca[,] pecas;
 
         public Tabuleiro (int linhas, int colunas) {
@@ -13,12 +14,12 @@ namespace tabuleiro {
             pecas = new Peca[linhas, colunas];
         }
 
-        public Peca Peca(Posicao pos)
+        public Peca peca(Posicao pos)
         {
             return pecas[pos.linha, pos.coluna];
         }
 
-        public Peca Peca (int linha, int coluna)
+        public Peca peca (int linha, int coluna)
         {
             return pecas[linha, coluna];
         }
@@ -26,7 +27,7 @@ namespace tabuleiro {
         public bool ExistePeca(Posicao pos)
         {
             ValidarPosicao(pos);
-            return Peca(pos) != null;
+            return peca(pos) != null;
         }
 
         public void ColocarPeca(Peca p, Posicao pos)
