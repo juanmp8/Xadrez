@@ -33,30 +33,37 @@ namespace xadrez_console.xadrez
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //ne
             pos.DefinirValores(posicao.linha - 1, posicao.coluna + 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //direita
             pos.DefinirValores(posicao.linha, posicao.coluna + 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //se
             pos.DefinirValores(posicao.linha + 1, posicao.coluna + 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //abaixo
             pos.DefinirValores(posicao.linha + 1, posicao.coluna);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //so
             pos.DefinirValores(posicao.linha + 1, posicao.coluna - 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //esquerda
             pos.DefinirValores(posicao.linha, posicao.coluna - 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }
+            //no
             pos.DefinirValores(posicao.linha - 1, posicao.coluna - 1);
             if (tab.PosicaoValida(pos) && PodeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
